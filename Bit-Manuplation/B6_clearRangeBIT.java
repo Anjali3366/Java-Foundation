@@ -3,6 +3,8 @@
 public class B6_clearRangeBIT {
     public static int clearBitInRange(int n, int i, int j) {
 
+        return 1;
+
     }
 
     public static void main(String[] args) {
