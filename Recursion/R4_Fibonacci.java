@@ -1,4 +1,4 @@
-
+// Statement -- print the nth fibonacci number 
 public class R4_Fibonacci {
 
     public static int fibonacci(int n) {
@@ -6,8 +6,8 @@ public class R4_Fibonacci {
             return n;
         }
 
-        int fibo = fibonacci(n - 1) + fibonacci(n - 2);
-        return fibo;
+        return fibonacci(n - 1) + fibonacci(n - 2);
+
     }
 
     public static void main(String[] args) {
@@ -16,3 +16,5 @@ public class R4_Fibonacci {
         System.out.println(fibonacci(n));
     }
 }
+
+// time complexity = O(2^n) exponential complexity

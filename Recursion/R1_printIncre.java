@@ -5,8 +5,9 @@ public class R1_printIncre {
             return;
         }
         System.out.println(i);
-        ;
+
         printIncr(num, i + 1);
+
     }
 
     public static void main(String[] args) {
