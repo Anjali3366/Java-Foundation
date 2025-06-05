@@ -67,3 +67,6 @@ public class D2_MergeSort {
     }
 
 }
+
+// time complexity -- O(N*logN)
+// space complexity -- O(n)
