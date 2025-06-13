@@ -35,5 +35,4 @@ public class R30_PowerOfTwo {
         System.out.println(PowerOfTwo(17));
         System.out.println(isPower(30));
     }
-
 }
