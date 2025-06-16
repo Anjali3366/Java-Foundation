@@ -30,9 +30,15 @@ public class R30_PowerOfTwo {
         return n > 0 && (n & (n - 1)) == 0;
     }
 
+    // power of three
+    public static boolean isPowerOfThree(int n) {
+        return n > 0 && 1162261467 % n == 0;
+    }
+
     public static void main(String[] args) {
         System.out.println(isPowerOfTwo(2, 0));
         System.out.println(PowerOfTwo(17));
         System.out.println(isPower(30));
+        System.out.println(isPowerOfThree(27));
     }
 }
