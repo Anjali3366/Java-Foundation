@@ -160,7 +160,6 @@ public class L0_DoublyLL {
     }
 
     // 2. insert at tail
-
     public static Node insertAtTail(Node head, int NVal) {
         Node temp = head;
         while (temp.next != null) {
@@ -173,7 +172,6 @@ public class L0_DoublyLL {
     }
 
     // 3. insert at kth Node
-
     public static Node insertAtKthPos(Node head, int nVal, int k) {
         if (head == null || k == 1) {
             return insertAtHead(head, nVal);
@@ -304,12 +302,12 @@ public class L0_DoublyLL {
         // head = insertAtKthPos(head, 8, 3);
         // printDLL(head);
 
-        // Insertion before given value X
-        head = insertBeforeX(head, 9, 1);
-        printDLL(head);
-
-        // // Insertion After given Value X
-        // head = insertAfterX(head, 0, 1);
+        // // Insertion before given value X
+        // head = insertBeforeX(head, 9, 1);
         // printDLL(head);
+
+        // Insertion After given Value X
+        head = insertAfterX(head, 0, 1);
+        printDLL(head);
     }
 }
