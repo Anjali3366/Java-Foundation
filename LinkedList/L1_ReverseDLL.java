@@ -54,8 +54,6 @@ public class L1_ReverseDLL {
             end = end.next;
         }
 
-        System.out.println(end.data);
-
         while (start != end) {
             int temp = start.data;
             start.data = end.data;
