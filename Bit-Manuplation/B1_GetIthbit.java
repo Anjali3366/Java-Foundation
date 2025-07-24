@@ -12,13 +12,14 @@ public class B1_GetIthbit {
     }
 
     // using right shift operator
-    public static int checkIthBit(int n, int i) {
+    // public static int checkIthBit(int n, int i) {
+    // int bitMask = 1 >> i;
 
-    }
+    // }
 
     public static void main(String[] args) {
         System.out.println("YOUR BIT IS : ");
-        System.out.println(getIthBit(7, 1));
+        System.out.println(getIthBit(7, 3));
         ;
     }
 }
