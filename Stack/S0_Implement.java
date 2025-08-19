@@ -127,6 +127,12 @@ public class S0_Implement {
 
     }
 
+    // Implementation of Stack using two queue
+
+    // Implementation of queue using stack
+
+    // Implementation usinng recursion
+
     public static void main(String[] args) {
         // ArrStack st = new ArrStack();
         // st.push(1);
