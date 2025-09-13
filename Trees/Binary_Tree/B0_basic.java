@@ -1,3 +1,6 @@
+// Traversal can be done in two ways -- 1. Depth first search (PreOrder, Inorder, PostOrder)        2. Breadth first search(Level Order)
+
+import java.util.*;
 
 public class B0_basic {
     public static class Node {
@@ -42,6 +45,61 @@ public class B0_basic {
         postOrder(root.left);
         postOrder(root.right);
         System.out.print(root.data + " ");
+    }
+
+    // Level Order Traversal in a binary tree
+    public static void levelOrder(Node root) {
+        // use a queue
+        if (root == null)
+            return;
+
+        Queue<Node> q = new LinkedList<>();
+        q.add(root);
+        q.add(null);
+
+        while (!q.isEmpty()) {
+            Node currNode = q.remove();
+            if (currNode == null) {
+                System.out.println();
+                if (q.isEmpty())
+                    break;
+                else
+                    q.add(null);
+            } else {
+                System.out.print(currNode.data + " ");
+                if (currNode.left != null)
+                    q.add(currNode.left);
+                if (currNode.right != null)
+                    q.add(currNode.right);
+            }
+        }
+
+    }
+
+    // return array list
+    public static List<List<Integer>> levelOr(Node root) {
+        List<List<Integer>> result = new ArrayList<>();
+        if (root == null)
+            return result;
+
+        Queue<Node> q = new LinkedList<>();
+        q.add(root);
+
+        while (!q.isEmpty()) {
+            int size = q.size();
+            List<Integer> level = new ArrayList<>();
+            for (int i = 0; i < size; i++) {
+                Node curr = q.remove();
+                level.add(curr.data);
+
+                if (curr.left != null)
+                    q.add(curr.left);
+                if (curr.right != null)
+                    q.add(curr.right);
+            }
+            result.add(level);
+        }
+        return result;
     }
 
     // Function that find the height of the binary tree
@@ -101,6 +159,10 @@ public class B0_basic {
         postOrder(root);
 
         System.out.println();
+        System.out.println("Level Order Traversal : ");
+        levelOrder(root);
+
+        System.out.println("Stored Ans : " + levelOr(root));
 
         System.out.println("Number of Nodes in tree : " + noOfNode(root));
         System.out.println("Height of tree : " + heightTree(root));
