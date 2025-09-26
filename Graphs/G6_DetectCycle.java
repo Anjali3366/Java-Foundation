@@ -49,6 +49,11 @@ public class G6_DetectCycle {
         return false;
     }
 
+    public static boolean isCycleDFS() {
+
+        return false;
+    }
+
     public static void main(String[] args) {
         int V = 7;
         ArrayList<ArrayList<Integer>> graph = new ArrayList<>();
