@@ -36,3 +36,46 @@ WHERE hire_date > '2021-01-01'
   AND department <> 'HR' --AND NOT department = 'HR' it will also work;
  
 ORDER BY hire_date ASC;
+
+
+
+-- ADD dept_id as an extra column in employees table and then make new table named department having dept_id and its name;
+
+CREATE TABLE department(
+dept_id INT PRIMARY KEY, 
+department_name VARCHAR(20)
+);
+
+INSERT INTO department(dept_id, department_name)
+VALUES
+(1, 'IT'),
+(2,'HR'),
+(3,'Finance');
+
+
+-- how to add column in existing table ;
+ALTER TABLE employees 
+ADD COLUMN dept_id INT ;
+
+-- how to make foreign key constraint in employees table ;
+ALTER TABLE employees
+ADD CONSTRAINT fk_emp_dept
+FOREIGN KEY(dept_id) REFERENCES department(dept_id);
+
+
+SELECT *FROM employees;
+SELECT * FROM department;
+
+
+
+-- update the dept_id column with the help of department table ;
+UPDATE employees
+SET dept_id=3
+where department ='Finance';
+
+--now we can update the row with the help of this line ;
+SET SQL_SAFE_UPDATES =0;
+
+--  how to delete a column from table;
+ALTER TABLE employees
+DROP COLUMN department;

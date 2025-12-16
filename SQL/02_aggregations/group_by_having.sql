@@ -10,3 +10,7 @@ SELECT department, COUNT(emp_id) AS employee_count
 FROM employees
 GROUP BY department
 HAVING COUNT(emp_id) > 2;
+
+
+
+
